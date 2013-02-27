@@ -7,7 +7,7 @@
 //
 
 #import "EJHAppDelegate.h"
-
+#import "EJHStretchyTableViewHeaderDemoViewController.h"
 @implementation EJHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -15,6 +15,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    EJHStretchyTableViewHeaderDemoViewController *vc = [[EJHStretchyTableViewHeaderDemoViewController alloc] initWithStyle:UITableViewStylePlain];
+    self.viewController = vc;
+    self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     return YES;
 }
